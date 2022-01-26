@@ -5,7 +5,7 @@ const morgan = require ('morgan')
 const app = express();
 const router = require('./router');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://piterjov:ratep128@cluster0.q6irv.mongodb.net/auth?retryWrites=true&w=majority')
+mongoose.connect('<your mongo url>')
 app.use(morgan('combined'))
 app.use(bodyParser.json({type: '*/*'}))
 router(app)
